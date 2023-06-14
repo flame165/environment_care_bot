@@ -14,7 +14,7 @@ async def on_ready():
 
 @bot.command()
 async def idesampah(ctx):
-    img_name = random.choice(os.lisdir('code/kerajinan'))
+    img_name = random.choice(os.listdir('code/kerajinan'))
     with open(f'code/kerajinan/{img_name}','rb') as gambar:
         picture = discord.File(gambar)
     await ctx.send(picture)
